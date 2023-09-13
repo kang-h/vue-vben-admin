@@ -150,6 +150,9 @@ importers:
       '@types/crypto-js':
         specifier: ^4.1.1
         version: 4.1.1
+      '@types/http-proxy':
+        specifier: ^1.17.5
+        version: 1.17.5
       '@types/intro.js':
         specifier: ^5.1.1
         version: 5.1.1
@@ -2498,6 +2501,12 @@ packages:
 
   /@types/http-errors@2.0.1:
     resolution: {integrity: sha512-/K3ds8TRAfBvi5vfjuz8y6+GiAYBZ0x4tXv1Av6CWBWn0IlADc+ZX9pMq7oU0fNQPnBwIZl3rmeLp6SBApbxSQ==}
+
+  /@types/http-proxy@1.17.5:
+    resolution: {integrity: sha512-GNkDE7bTv6Sf8JbV2GksknKOsk7OznNYHSdrtvPJXO0qJ9odZig6IZKUi5RFGi6d1bf6dgIAe4uXi3DBc7069Q==}
+    dependencies:
+      '@types/node': 20.4.0
+    dev: true
 
   /@types/intro.js@5.1.1:
     resolution: {integrity: sha512-gxrfhzwHeCZI8PoucIVRCe5cX0j29YYB1YLIfPb87HN1HiAhrl0CGMFuYPzo6Gvn5diAPCHF6XW2SR+Lqxexlg==}
