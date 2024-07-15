@@ -89,6 +89,38 @@
           ],
         },
       },
+      {
+        field: 'field200',
+        component: 'Input',
+        label: '字段200',
+        colProps: {
+          span: 8,
+        },
+      },
+      {
+        field: 'field201',
+        component: 'Input',
+        label: '字段201',
+        colProps: {
+          span: 8,
+        },
+      },
+      {
+        field: 'field202',
+        component: 'Input',
+        label: '字段202',
+        colProps: {
+          span: 8,
+        },
+      },
+      {
+        field: 'field203',
+        component: 'Input',
+        label: '字段203',
+        colProps: {
+          span: 8,
+        },
+      },
       // {
       //   field: 'field7',
       //   component: 'RadioGroup',
@@ -159,6 +191,7 @@
         },
         compact: true,
         showAdvancedButton: true,
+        alwaysShowLines: 1,
       });
       const extraSchemas: FormSchema[] = [];
       for (let i = 14; i < 30; i++) {
@@ -184,7 +217,7 @@
         },
         compact: true,
         showAdvancedButton: true,
-        alwaysShowLines: 2,
+        alwaysShowLines: 1,
       });
       return {
         register,

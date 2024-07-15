@@ -116,7 +116,26 @@
   });
   //表单
   const [registerForm, { validate }] = useForm({
-    schemas: [{ field: 'type', component: 'Input', label: '类型' }],
+    schemas: [
+      {
+        field: 'type',
+        // defaultValue: 'all',
+        component: 'Select',
+        label: '저장 방식',
+        colProps: { span: 8 },
+        componentProps: {
+          options: [
+            { value: 'all', label: '전체' },
+            { value: 'large', label: 'large' },
+            { value: 'middle', label: 'middle' },
+            { value: 'small', label: 'small' },
+            { value: '1', label: '1' },
+            { value: '2', label: '2' },
+            { value: '3', label: '3' },
+          ],
+        },
+      },
+    ],
     labelWidth: 80,
     baseColProps: { span: 6 },
     actionColOptions: { span: 24 },

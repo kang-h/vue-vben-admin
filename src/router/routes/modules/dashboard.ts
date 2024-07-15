@@ -4,10 +4,12 @@ import { LAYOUT } from '/@/router/constant';
 import { t } from '/@/hooks/web/useI18n';
 
 const dashboard: AppRouteModule = {
-  path: '/dashboard',
+  // path: '/dashboard',
+  path: '/hub/domain/:domain/dashboard',
   name: 'Dashboard',
   component: LAYOUT,
-  redirect: '/dashboard/analysis',
+  // redirect: '/dashboard/analysis',
+  redirect: '/hub/domain/:domain/dashboard/analysis',
   meta: {
     orderNo: 10,
     icon: 'ion:grid-outline',
@@ -21,6 +23,7 @@ const dashboard: AppRouteModule = {
       meta: {
         // affix: true,
         title: t('routes.dashboard.analysis'),
+        roles: ['query_sku'],
       },
     },
     {
@@ -29,6 +32,7 @@ const dashboard: AppRouteModule = {
       component: () => import('/@/views/dashboard/workbench/index.vue'),
       meta: {
         title: t('routes.dashboard.workbench'),
+        roles: ['query_sku'],
       },
     },
   ],

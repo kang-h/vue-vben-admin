@@ -19,6 +19,7 @@ const charts: AppRouteModule = {
       name: 'BaiduMap',
       meta: {
         title: t('routes.demo.charts.baiduMap'),
+        roles: ['test'],
       },
       component: () => import('/@/views/demo/charts/map/Baidu.vue'),
     },
