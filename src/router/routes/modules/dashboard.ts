@@ -23,7 +23,7 @@ const dashboard: AppRouteModule = {
       meta: {
         // affix: true,
         title: t('routes.dashboard.analysis'),
-        roles: ['query_sku'],
+        // roles: [RoleEnum.ROLE_OWNER],
       },
     },
     {
@@ -32,7 +32,7 @@ const dashboard: AppRouteModule = {
       component: () => import('/@/views/dashboard/workbench/index.vue'),
       meta: {
         title: t('routes.dashboard.workbench'),
-        roles: ['query_sku'],
+        // roles: [RoleEnum.ROLE_OWNER],
       },
     },
   ],

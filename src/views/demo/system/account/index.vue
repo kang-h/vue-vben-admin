@@ -75,12 +75,12 @@
           console.log('handleSearchInfoFn', info);
           return info;
         },
-        actionColumn: {
-          width: 120,
-          title: '操作',
-          dataIndex: 'action',
-          // slots: { customRender: 'action' },
-        },
+        // actionColumn: {
+        //   width: 120,
+        //   title: '操作',
+        //   dataIndex: 'action',
+        //   // slots: { customRender: 'action' },
+        // },
       });
 
       function handleCreate() {

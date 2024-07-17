@@ -36,6 +36,8 @@ export interface UserInfo {
   realName: string;
   avatar: string;
   desc?: string;
+  companyKey: string;
+  domain: string;
   homePath?: string;
   roles: RoleInfo[];
 }

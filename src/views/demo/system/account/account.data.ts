@@ -3,33 +3,25 @@ import { BasicColumn, FormSchema } from '/@/components/Table';
 
 export const columns: BasicColumn[] = [
   {
-    title: '用户名',
-    dataIndex: 'account',
+    title: 'id',
+    dataIndex: 'id',
+    width: 120,
+    ifShow: false,
+  },
+  {
+    title: 'username',
+    dataIndex: 'username',
     width: 120,
   },
   {
-    title: '昵称',
-    dataIndex: 'nickname',
-    width: 120,
-  },
-  {
-    title: '邮箱',
+    title: 'email',
     dataIndex: 'email',
     width: 120,
   },
   {
-    title: '创建时间',
+    title: 'createTime',
     dataIndex: 'createTime',
     width: 180,
-  },
-  {
-    title: '角色',
-    dataIndex: 'role',
-    width: 200,
-  },
-  {
-    title: '备注',
-    dataIndex: 'remark',
   },
 ];
 

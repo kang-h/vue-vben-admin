@@ -11,6 +11,7 @@ import {
   RoleListGetResultModel,
 } from './model/systemModel';
 import { defHttp } from '/@/utils/http/axios';
+import { useUserStore } from '/@/store/modules/user';
 
 enum Api {
   AccountList = '/system/getAccountList',
@@ -22,11 +23,20 @@ enum Api {
   GetAllRoleList = '/system/getAllRoleList',
 }
 
-export const getAccountList = (params: AccountParams) =>
-  defHttp.get<AccountListGetResultModel>({ url: Api.AccountList, params });
+export const getAccountList = (params: AccountParams) => {
+  const userStore = useUserStore();
+  console.log(userStore.getUserInfo);
+  const userInfo = userStore.getUserInfo;
+  const domain = userInfo.domain;
+  return defHttp.get<AccountListGetResultModel>({
+    url: `/hub/domain/${domain}/api/v1/user`,
+    params,
+  });
+};
 
 export const getDeptList = (params?: DeptListItem) =>
-  defHttp.get<DeptListGetResultModel>({ url: Api.DeptList, params });
+  // defHttp.get<DeptListGetResultModel>({ url: Api.DeptList, params });
+  [];
 
 export const getMenuList = (params?: MenuParams) =>
   defHttp.get<MenuListGetResultModel>({ url: Api.MenuList, params });
